@@ -14,32 +14,56 @@
 <div class="row">
     <div class="col">
         <div class="jumbotron p-3">
-            <table class="table table-hover table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Town/City</th>
-                        <th scope="col">Event Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Actions</th>
-                    </tr>
-                </thead>
+            <div class="table-responsive">
+                <table class="table table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col" class="min-width">Town/City</th>
+                            <th scope="col" class="min-width">Event Name</th>
+                            <th scope="col" class="min-width">Details</th>
+                            <th scope="col" class="min-width">Date</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>London</td>
-                        <td>Example Event</td>
-                        <td>See Description...</td>
-                        <td>12/10/2024</td>
-                        <td>
-                            <button class="btn btn-sm btn-info">Edit</button>
-                            <button class="btn btn-sm btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>London</td>
+                            <td>Example Event</td>
+                            <td><button class="btn btn-sm btn-warning">See Details</button></td>
+                            <td>12/10/2024</td>
+                            <td class="d-flex">
+                                <button class="btn btn-sm btn-info mr-1">Edit</button>
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Swansea</td>
+                            <td>Dance Event</td>
+                            <td><button class="btn btn-sm btn-warning">See Details</button></td>
+                            <td>12/11/2024</td>
+                            <td class="d-flex">
+                                <button class="btn btn-sm btn-info mr-1">Edit</button>
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Swansea</td>
+                            <td>Food Event</td>
+                            <td><button class="btn btn-sm btn-warning">See Details</button></td>
+                            <td>12/11/2024</td>
+                            <td class="d-flex">
+                                <button class="btn btn-sm btn-info mr-1">Edit</button>
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
