@@ -1,6 +1,46 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Welcome to the Events List</h1>
-<p>This is the index.html</p>
+<div class="row">
+    <div class="col">
+        <div class="text-center mt-3">
+            <h1>Welcome To Events List UK</h1>
+            <p>See events listed here:</p>
+            <button class="btn btn-lrg btn-success mt-1 mb-3">Add New Event</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="jumbotron p-3">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Town/City</th>
+                        <th scope="col">Event Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>London</td>
+                        <td>Example Event</td>
+                        <td>See Description...</td>
+                        <td>12/10/2024</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">Edit</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 {% endblock %}
