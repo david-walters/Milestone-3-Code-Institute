@@ -1,0 +1,45 @@
+<!-- Here is the modal for the form to edit an event -->
+<div class="modal fade" id="editEventModal" tabindex="-1" role="dialog" aria-labelledby="editEventModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="addEventModalLabel">Edit Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Modal Body with Form -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="eventName">Event Name</label>
+                        <input type="text" class="form-control" id="eventName" placeholder="Enter event name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventLocation">Town/City</label>
+                        <input type="text" class="form-control" id="eventLocation" placeholder="Enter location"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Details</label>
+                        <textarea class="form-control" id="eventDescription" rows="8"
+                            placeholder="Enter event description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Date</label>
+                        <input type="date" class="form-control" id="eventDate" required>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

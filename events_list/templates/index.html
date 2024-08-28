@@ -6,7 +6,10 @@
         <div class="text-center mt-3">
             <h1>Welcome To Events List UK</h1>
             <p>See events listed here:</p>
-            <button class="btn btn-lrg btn-success mt-1 mb-3">Add New Event</button>
+            <!-- This button will open a modal containing a form to add an event to the events list -->
+            <button class="btn btn-lrg btn-success mt-1 mb-3" data-toggle="modal" data-target="#addEventModal">
+                Add New Event
+            </button>
         </div>
     </div>
 </div>
@@ -35,7 +38,9 @@
                             <td><button class="btn btn-sm btn-warning">See Details</button></td>
                             <td>12/10/2024</td>
                             <td class="d-flex">
-                                <button class="btn btn-sm btn-info mr-1">Edit</button>
+                                <!-- This button will open a modal containing a form to edit the event containing the selected edit button -->
+                                <button class="btn btn-sm btn-info mr-1" data-toggle="modal"
+                                    data-target="#editEventModal">Edit</button>
                                 <button class="btn btn-sm btn-danger">Delete</button>
                             </td>
                         </tr>
@@ -67,4 +72,8 @@
         </div>
     </div>
 </div>
+
+{% include "modal_add_event.html" %}
+{% include "modal_edit_event.html" %}
+
 {% endblock %}
