@@ -41,7 +41,8 @@
                                 <!-- This button will open a modal containing a form to edit the event containing the selected edit button -->
                                 <button class="btn btn-sm btn-info mr-1" data-toggle="modal"
                                     data-target="#editEventModal">Edit</button>
-                                <button class="btn btn-sm btn-danger">Delete</button>
+                                <button class="btn btn-sm btn-danger" data-toggle="modal"
+                                    data-target="#deleteConfirmationModal">Delete</button>
                             </td>
                         </tr>
                         <tr>
@@ -75,5 +76,7 @@
 
 {% include "modal_add_event.html" %}
 {% include "modal_edit_event.html" %}
+{% include "modal_delete_event.html" %}
+
 
 {% endblock %}
