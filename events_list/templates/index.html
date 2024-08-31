@@ -60,7 +60,9 @@
                             <th scope="row">3</th>
                             <td>Swansea</td>
                             <td>Food Event</td>
-                            <td><button class="btn btn-sm btn-warning">See Details</button></td>
+                            <td><button class="btn btn-sm btn-warning" data-toggle="modal"
+                                    data-target="#eventDetailsModal">See Details</button>
+                            </td>
                             <td>12/11/2024</td>
                             <td class="d-flex">
                                 <button class="btn btn-sm btn-info mr-1">Edit</button>
@@ -77,6 +79,7 @@
 {% include "modal_add_event.html" %}
 {% include "modal_edit_event.html" %}
 {% include "modal_delete_event.html" %}
+{% include "modal_see_details.html" %}
 
 
 {% endblock %}
