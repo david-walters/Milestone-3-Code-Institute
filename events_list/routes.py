@@ -25,4 +25,7 @@ def add_event():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    
+    events = Event.query.all()
+
+    return render_template('index.html', events=events)
