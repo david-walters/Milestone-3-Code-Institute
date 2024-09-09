@@ -1,9 +1,23 @@
+# Virtual environment
 venv/
+
+# Environment variable file
 .env
+
+# Byte-compiled Python files and cache
 __pycache__/
 *.pyc
+
+# IDE settings
 .vscode/
 .idea/
+
+# Log files
 *.log
+
+# System-specific files
 .DS_Store
 Thumbs.db
+
+# Alembic cache (optional, not the migrations folder)
+migrations/versions/*.pyc
