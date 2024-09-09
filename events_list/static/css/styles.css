@@ -72,3 +72,15 @@ footer p:first-of-type {
 .modal-height {
     height: 56vh;
 }
+
+/* ------------- Flash Messages ------------- */
+
+.alert {
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+.alert.hidden {
+    opacity: 0;
+    overflow: hidden;
+  }

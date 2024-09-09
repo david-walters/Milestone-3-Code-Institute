@@ -13,26 +13,27 @@
 
             <!-- Modal Body with Form -->
             <div class="modal-body">
-                <form>
+                <form method="POST" action="{{ url_for('add_event') }}">
                     <div class="form-group">
                         <label for="eventName">Event Name</label>
-                        <input type="text" class="form-control" id="eventName" placeholder="Enter event name" required>
+                        <input type="text" class="form-control" id="eventName" name="event_name"
+                            placeholder="Enter event name" required>
                     </div>
                     <div class="form-group">
                         <label for="eventLocation">Town/City</label>
-                        <input type="text" class="form-control" id="eventLocation" placeholder="Enter location"
-                            required>
+                        <input type="text" class="form-control" id="eventLocation" name="city"
+                            placeholder="Enter location" required>
                     </div>
                     <div class="form-group">
                         <label for="eventDescription">Details</label>
-                        <textarea class="form-control" id="eventDescription" rows="8"
+                        <textarea class="form-control" id="eventDescription" name="description" rows="8"
                             placeholder="Enter event description" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="eventDate">Date</label>
-                        <input type="date" class="form-control" id="eventDate" required>
+                        <input type="date" class="form-control" id="eventDate" name="event_date" required>
                     </div>
-                </form>
+
             </div>
 
             <!-- Modal Footer -->
@@ -40,6 +41,7 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Save Event</button>
             </div>
+            </form>
         </div>
     </div>
 </div>

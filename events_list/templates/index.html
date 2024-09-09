@@ -14,6 +14,14 @@
     </div>
 </div>
 
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ category }}">{{ message }}</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
 <div class="row">
     <div class="col">
         <div class="jumbotron p-3">
@@ -35,7 +43,8 @@
                             <th scope="row">1</th>
                             <td>London</td>
                             <td>Example Event</td>
-                            <td><button class="btn btn-sm btn-warning">See Details</button></td>
+                            <td><button class="btn btn-sm btn-warning" data-toggle="modal"
+                                    data-target="#eventDetailsModal">See Details</button></td>
                             <td>12/10/2024</td>
                             <td class="d-flex">
                                 <!-- This button will open a modal containing a form to edit the event containing the selected edit button -->
@@ -43,30 +52,6 @@
                                     data-target="#editEventModal">Edit</button>
                                 <button class="btn btn-sm btn-danger" data-toggle="modal"
                                     data-target="#deleteConfirmationModal">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Swansea</td>
-                            <td>Dance Event</td>
-                            <td><button class="btn btn-sm btn-warning">See Details</button></td>
-                            <td>12/11/2024</td>
-                            <td class="d-flex">
-                                <button class="btn btn-sm btn-info mr-1">Edit</button>
-                                <button class="btn btn-sm btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Swansea</td>
-                            <td>Food Event</td>
-                            <td><button class="btn btn-sm btn-warning" data-toggle="modal"
-                                    data-target="#eventDetailsModal">See Details</button>
-                            </td>
-                            <td>12/11/2024</td>
-                            <td class="d-flex">
-                                <button class="btn btn-sm btn-info mr-1">Edit</button>
-                                <button class="btn btn-sm btn-danger">Delete</button>
                             </td>
                         </tr>
                     </tbody>
