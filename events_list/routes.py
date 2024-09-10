@@ -37,6 +37,11 @@ def edit_event(event_id):
     
     return render_template('modal_edit_event.html', event=event)
 
+@app.route('/details/<int:event_id>', methods=['GET'])
+def event_details(event_id):
+    event = Event.query.get_or_404(event_id)
+    return render_template('modal_see_details.html', event=event)
+
 @app.route('/')
 def index():
     

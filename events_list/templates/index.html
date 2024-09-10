@@ -45,8 +45,8 @@
                             <td>{{ event.city }}</td>
                             <td>{{ event.event_name }}</td>
                             <td>
-                                <button class="btn btn-sm btn-warning" data-toggle="modal"
-                                    data-target="#eventDetailsModal">See Details</button>
+                                <a href="{{ url_for('event_details', event_id=event.id) }}"
+                                    class="btn btn-sm btn-warning">See Details</a>
                             </td>
                             <td>{{ event.event_date.strftime('%d/%m/%Y') }}</td>
                             <td class="d-flex">
@@ -70,7 +70,5 @@
 
 {% include "modal_add_event.html" %}
 {% include "modal_delete_event.html" %}
-{% include "modal_see_details.html" %}
-
 
 {% endblock %}

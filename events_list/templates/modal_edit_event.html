@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2 class="mt-2">Edit Event</h2>
+<h2 class="mt-4">Edit Event</h2>
 <form method="POST">
     <div class="form-group">
         <label for="eventName">Event Name</label>
@@ -22,7 +22,10 @@
         <input type="date" class="form-control" id="eventDate" name="event_date" value="{{ event.event_date }}"
             required>
     </div>
-    <button type="submit" class="btn btn-primary">Update</button>
-    <a href="{{ url_for('index') }}" class="btn btn-secondary ml-2">Cancel</a>
+    <div class="mb-4">
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary ml-2">Cancel</a>
+    </div>
+
 </form>
 {% endblock %}
