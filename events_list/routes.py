@@ -23,6 +23,20 @@ def add_event():
 
         return redirect(url_for('index'))
 
+@app.route('/edit/<int:event_id>', methods=['GET', 'POST'])
+def edit_event(event_id):
+    event = Event.query.get_or_404(event_id)
+    if request.method == 'POST':
+        event.city = request.form['city']
+        event.event_name = request.form['event_name']
+        event.description = request.form['description']
+        event.event_date = request.form['event_date']
+        db.session.commit()
+        flash('Event updated successfully!', 'success')
+        return redirect(url_for('index'))
+    
+    return render_template('modal_edit_event.html', event=event)
+
 @app.route('/')
 def index():
     

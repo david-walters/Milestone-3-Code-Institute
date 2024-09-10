@@ -50,9 +50,8 @@
                             </td>
                             <td>{{ event.event_date.strftime('%d/%m/%Y') }}</td>
                             <td class="d-flex">
-                                <!-- This button will open a modal containing a form to edit the event -->
-                                <button class="btn btn-sm btn-info mr-1" data-toggle="modal"
-                                    data-target="#editEventModal">Edit</button>
+                                <a href="{{ url_for('edit_event', event_id=event.id) }}"
+                                    class="btn btn-sm btn-info mr-1">Edit</a>
                                 <button class="btn btn-sm btn-danger" data-toggle="modal"
                                     data-target="#deleteConfirmationModal">Delete</button>
                             </td>
@@ -70,7 +69,6 @@
 </div>
 
 {% include "modal_add_event.html" %}
-{% include "modal_edit_event.html" %}
 {% include "modal_delete_event.html" %}
 {% include "modal_see_details.html" %}
 
