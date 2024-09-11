@@ -42,6 +42,25 @@ def event_details(event_id):
     event = Event.query.get_or_404(event_id)
     return render_template('modal_see_details.html', event=event)
 
+@app.route('/delete_confirmation/<int:event_id>', methods=['GET'])
+def delete_confirmation(event_id):
+    event = Event.query.get_or_404(event_id)
+    return render_template('modal_delete_event.html', event=event)
+
+@app.route('/delete/<int:event_id>', methods=['POST'])
+def delete_event(event_id):
+    event = Event.query.get_or_404(event_id)
+    
+    try:
+        db.session.delete(event)
+        db.session.commit()
+        flash('Event deleted successfully!', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash(f'Error deleting event: {str(e)}', 'danger')
+    
+    return redirect(url_for('index'))
+
 @app.route('/')
 def index():
     
