@@ -61,6 +61,10 @@ def delete_event(event_id):
     
     return redirect(url_for('index'))
 
+@app.route('/guidelines')
+def guidelines():
+    return render_template('guidelines.html')
+
 @app.route('/')
 def index():
     

@@ -27,7 +27,8 @@
                     <a class="nav-link {% if request.endpoint == 'index' %}active{% endif %}"
                         href="{{ url_for('index') }}">Home {% if request.endpoint == 'index' %}<span
                             class="sr-only">(current)</span>{% endif %}</a>
-                    <a class="nav-link {% if request.endpoint == 'guidelines' %}active{% endif %}" href="#">Guidelines
+                    <a class="nav-link {% if request.endpoint == 'guidelines' %}active{% endif %}"
+                        href="{{ url_for('guidelines') }}">Guidelines
                         {% if request.endpoint == 'guidelines' %}<span class="sr-only">(current)</span>{% endif %}</a>
                 </div>
             </div>
