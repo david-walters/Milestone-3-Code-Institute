@@ -64,6 +64,6 @@ def delete_event(event_id):
 @app.route('/')
 def index():
     
-    events = Event.query.all()
+    events = Event.query.order_by(Event.event_date.asc()).all()
 
     return render_template('index.html', events=events)
