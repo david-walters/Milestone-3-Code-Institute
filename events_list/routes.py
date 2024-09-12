@@ -35,17 +35,17 @@ def edit_event(event_id):
         flash('Event updated successfully!', 'success')
         return redirect(url_for('index'))
     
-    return render_template('modal_edit_event.html', event=event)
+    return render_template('edit_event.html', event=event)
 
 @app.route('/details/<int:event_id>', methods=['GET'])
 def event_details(event_id):
     event = Event.query.get_or_404(event_id)
-    return render_template('modal_see_details.html', event=event)
+    return render_template('see_details.html', event=event)
 
 @app.route('/delete_confirmation/<int:event_id>', methods=['GET'])
 def delete_confirmation(event_id):
     event = Event.query.get_or_404(event_id)
-    return render_template('modal_delete_event.html', event=event)
+    return render_template('delete_event.html', event=event)
 
 @app.route('/delete/<int:event_id>', methods=['POST'])
 def delete_event(event_id):
