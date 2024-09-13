@@ -15,7 +15,9 @@ if app.config['SQLALCHEMY_DATABASE_URI'].startswith("postgres://"):
     app.config['SQLALCHEMY_DATABASE_URI'] = app.config['SQLALCHEMY_DATABASE_URI'].replace("postgres://", "postgresql://", 1)
 app.config['IP'] = os.getenv('IP', '127.0.0.1')
 app.config['PORT'] = int(os.getenv('PORT', 5000))
-app.config['DEBUG'] = os.getenv('DEBUG', 'False').lower() == 'true'
+# app.config['DEBUG'] = os.getenv('DEBUG', 'False')
+app.config['DEVELOPMENT'] = os.getenv('DEVELOPMENT')
+app.config['DEBUG'] = app.config['DEVELOPMENT']
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
