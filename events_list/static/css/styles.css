@@ -56,9 +56,8 @@ footer p {
 }
 
 footer p:first-of-type {
-    font-size: 1.1rem;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 16px;
 }
 
 /* ------------- Events Table ------------- */
