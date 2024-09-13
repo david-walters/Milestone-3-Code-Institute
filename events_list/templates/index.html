@@ -6,6 +6,7 @@
         <div class="text-center mt-3">
             <h1>Welcome To Events List UK</h1>
             <p>See events listed here:</p>
+
             <!-- This button will open a modal containing a form to add an event to the events list -->
             <button class="btn btn-lrg btn-success mt-1 mb-3" data-toggle="modal" data-target="#addEventModal">
                 Add New Event
@@ -14,6 +15,7 @@
     </div>
 </div>
 
+<!-- Flash messages for success or error feedback -->
 {% with messages = get_flashed_messages(with_categories=true) %}
 {% if messages %}
 {% for category, message in messages %}
@@ -26,6 +28,7 @@
     <div class="col">
         <div class="jumbotron p-3">
             <div class="table-responsive">
+                <!-- Table displaying events -->
                 <table class="table table-hover table-dark">
                     <thead>
                         <tr>
@@ -39,17 +42,20 @@
                     </thead>
 
                     <tbody>
+                        <!-- Loop through the list of events and display each event -->
                         {% for event in events %}
                         <tr>
                             <th scope="row">{{ loop.index }}</th>
                             <td>{{ event.city }}</td>
                             <td>{{ event.event_name }}</td>
                             <td>
+                                <!-- Link to view details of the event -->
                                 <a href="{{ url_for('event_details', event_id=event.id) }}"
                                     class="btn btn-sm btn-warning">See Details</a>
                             </td>
                             <td>{{ event.event_date.strftime('%d/%m/%Y') }}</td>
                             <td class="d-flex">
+                                <!-- Edit and Delete buttons for each event-->
                                 <a href="{{ url_for('edit_event', event_id=event.id) }}"
                                     class="btn btn-sm btn-info mr-1">Edit</a>
                                 <a href="{{ url_for('delete_confirmation', event_id=event.id) }}"
@@ -57,6 +63,7 @@
                             </td>
                         </tr>
                         {% else %}
+                        <!-- Message displayed if no events are found -->
                         <tr>
                             <td colspan="6" class="text-center">No events found</td>
                         </tr>
@@ -68,6 +75,7 @@
     </div>
 </div>
 
+<!-- Includes the modal for adding a new event -->
 {% include "modal_add_event.html" %}
 
 {% endblock %}

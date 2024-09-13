@@ -1,5 +1,6 @@
 from events_list import db
 
+# This model represents an 'Event' entity in the database, which stores the details of individual events.
 class Event(db.Model):
     __tablename__ = 'events'
     id = db.Column(db.Integer, primary_key=True)

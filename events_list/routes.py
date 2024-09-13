@@ -1,8 +1,8 @@
 from flask import render_template, request, redirect, url_for, flash
 from events_list import app, db
-
 from events_list.models import Event
 
+# Route to handle adding a new event (via form submission).
 @app.route('/add_event', methods=['POST'])
 def add_event():
     if request.method == 'POST':
@@ -23,6 +23,7 @@ def add_event():
 
         return redirect(url_for('index'))
 
+# Route to handle editing an existing event. Displays event details in a form for editing, and saves changes.
 @app.route('/edit/<int:event_id>', methods=['GET', 'POST'])
 def edit_event(event_id):
     event = Event.query.get_or_404(event_id)
@@ -37,16 +38,19 @@ def edit_event(event_id):
     
     return render_template('edit_event.html', event=event)
 
+# Route to display the details of a specific event.
 @app.route('/details/<int:event_id>', methods=['GET'])
 def event_details(event_id):
     event = Event.query.get_or_404(event_id)
     return render_template('see_details.html', event=event)
 
+# Route to display a confirmation page for deleting a specific event.
 @app.route('/delete_confirmation/<int:event_id>', methods=['GET'])
 def delete_confirmation(event_id):
     event = Event.query.get_or_404(event_id)
     return render_template('delete_event.html', event=event)
 
+# Route to handle the deletion of an event (after confirmation).
 @app.route('/delete/<int:event_id>', methods=['POST'])
 def delete_event(event_id):
     event = Event.query.get_or_404(event_id)
@@ -61,13 +65,13 @@ def delete_event(event_id):
     
     return redirect(url_for('index'))
 
+# Route to display the website guidelines page.
 @app.route('/guidelines')
 def guidelines():
     return render_template('guidelines.html')
 
+# Route to display the homepage, which lists all events sorted by date.
 @app.route('/')
 def index():
-    
     events = Event.query.order_by(Event.event_date.asc()).all()
-
     return render_template('index.html', events=events)
