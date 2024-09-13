@@ -1,1 +1,1 @@
-web: python run.py
+web: gunicorn events_list:app
