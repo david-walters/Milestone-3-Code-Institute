@@ -1,15 +1,15 @@
 # My Flask Project: Events List UK
 
-![My Flask Project shown on a variety of screen sizes]()
+![My Flask Project shown on a variety of screen sizes](events_list/static/images/home-page.png)
 
-Visit the deployed site: [My JS Quiz!](https://david-walters.github.io/Milestone-2-Code-Institute/)
+Visit the deployed site: [Events List UK](https://events-list-uk-6cbca1177466.herokuapp.com/)
 
 I have created an interesting quiz game with images to demonstrate my ability with JavaScript.
 
 ![Github last commit](https://img.shields.io/badge/Last%20Commit%20-%20September%202024%20-%20blue)
 ![GitHub contributors](https://img.shields.io/badge/Contributors%20-%201%20-%20light%20green)
 ![GitHub language count](https://img.shields.io/badge/Languages%20-%205%20-%20orange)
-![Python language percentage](https://img.shields.io/badge/HTML_&_Python%20-%2036.4%25%20-%20violet)
+![Python language percentage](https://img.shields.io/badge/Python%20-%2036.4%25%20-%20violet)
 ![W3C Validation](https://img.shields.io/badge/W3C%20-%20Validated%20-%20gold)
 
 ## CONTENTS
@@ -49,7 +49,7 @@ I have created an interesting quiz game with images to demonstrate my ability wi
 
 ---
 
-![The logo](assets/images/readme-images/logo.png)
+![The Logo](events_list/static/images/logo.png)
 
 ## User Experience (UX)
 
@@ -80,7 +80,7 @@ nav {
 }
 ```
 
-- I have used `rgb(220, 20, 20)` for the nav bar.
+- I have used `rgb(220, 20, 20)` for the Nav Bar.
 - I have used `#018601` for the Add Event button.
 - I have used `#ffc107` for the See Details button.
 - I have used `#435dd2` for the Edit button.
@@ -112,15 +112,15 @@ By using this trio of fonts, we ensure that Events List UK maintains a consisten
 
 Wireframes were created using Figma.
 
-![Home Page](events_list/static/images/wireframe-home-page.png)
+- [Home Page](events_list/static/images/wireframe-home-page.png)
 
-![Add/Edit Event Form Page](events_list/static/images/wireframe-edit-page.png)
+- [Add/Edit Event Form Page](events_list/static/images/wireframe-edit-page.png)
 
-![See Details Page](events_list/static/images/wireframe-see-details-page.png)
+- [See Details Page](events_list/static/images/wireframe-see-details-page.png)
 
-![Delete Event Page](events_list/static/images/wireframe-delete-event-page.png)
+- [Delete Event Page](events_list/static/images/wireframe-delete-event-page.png)
 
-![Guidelines Page](events_list/static/images/wireframe-guidelines-page.png)
+- [Guidelines Page](events_list/static/images/wireframe-guidelines-page.png)
 
 ### Features
 
