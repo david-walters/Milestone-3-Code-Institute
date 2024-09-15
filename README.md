@@ -4,8 +4,6 @@
 
 Visit the deployed site: [Events List UK](https://events-list-uk-6cbca1177466.herokuapp.com/)
 
-I have created an interesting quiz game with images to demonstrate my ability with JavaScript.
-
 ![Github last commit](https://img.shields.io/badge/Last%20Commit%20-%20September%202024%20-%20blue)
 ![GitHub contributors](https://img.shields.io/badge/Contributors%20-%201%20-%20light%20green)
 ![GitHub language count](https://img.shields.io/badge/Languages%20-%205%20-%20orange)
