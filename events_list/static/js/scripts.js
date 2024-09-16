@@ -1,4 +1,4 @@
-// The allows the Flash Message to remain visible for 6 seconds and then it will remove it
+// This allows the Flash Message to remain visible for 6 seconds and then it will remove it
 
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
