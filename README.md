@@ -178,7 +178,7 @@ Flash messages are implemented throughout the website to provide users with inst
 
 The guidelines page provides users with a clear and concise set of rules and best practices for using the Events List UK website. It outlines how to add, edit, and delete events, ensuring that users understand the process and their responsibilities. Additionally, the page emphasizes the importance of appropriate content, event accuracy, and respectful interactions with other users. By setting these expectations, the guidelines page helps to maintain a positive environment where users can easily discover and share relevant events, contributing to the overall success and usability of the platform.
 
-![Guidelines Page](events_list\static\images\guidelines-page.png)
+![Guidelines Page](events_list/static/images/guidelines-page.png)
 
 ### Future Implementations
 
