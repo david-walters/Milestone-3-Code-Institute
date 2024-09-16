@@ -150,31 +150,37 @@ The Add Event Modal is a user-friendly interface designed for submitting or modi
 
 ![Add Event Modal](events_list/static/images/add-event-modal.png)
 
-### Edit Event Page
+#### Edit Event Page
 
 In the case of editing an existing event, the form that appears when selecting the Edit button of an event is pre-populated with the current event details, allowing users to make updates easily. The form ensures a seamless process for making modifications.
 
 ![Edit Event Page](events_list/static/images/edit-event-page.png)
 
-### See Details Page
+#### See Details Page
 
 The "See Details" page is a key feature of the website that allows users to view in-depth information about specific events. When a user clicks on an event from the main list, they are taken to this page, which displays additional details such as the event description, location, and date. Built using Flask's routing system and dynamic templates, the page fetches event data from the database and renders it in a clean and user-friendly format. The layout is styled with Bootstrap, ensuring that the page is responsive and looks great on all devices. This functionality enhances user engagement by providing easy access to detailed event information.
 
 ![See Details Page](events_list/static/images/event-details-page.png)
 
-### Delete Event Page
+#### Delete Event Page
 
 The "Delete Event" page is designed to allow users to remove events from the list with ease. When a user selects the "Delete" option for an event, they are taken to a confirmation page that asks them to verify the deletion before proceeding. This extra step ensures that events are not removed accidentally.
 
 ![Delete Event Page](events_list/static/images/delete-event-page.png)
 
-### Flash Messages
+#### Flash Messages
 
 Flash messages are implemented throughout the website to provide users with instant feedback on their actions. Whether it's adding, editing, or deleting an event, flash messages display brief notifications that confirm the success or failure of these operations.
 
 ![Flash Message](events_list/static/images/flash-message.png)
 
-#### Future Implementations
+#### Guidelines Page
+
+The guidelines page provides users with a clear and concise set of rules and best practices for using the Events List UK website. It outlines how to add, edit, and delete events, ensuring that users understand the process and their responsibilities. Additionally, the page emphasizes the importance of appropriate content, event accuracy, and respectful interactions with other users. By setting these expectations, the guidelines page helps to maintain a positive environment where users can easily discover and share relevant events, contributing to the overall success and usability of the platform.
+
+![Guidelines Page](events_list\static\images\guidelines-page.png)
+
+### Future Implementations
 
 In future implementations I would like to:
 
