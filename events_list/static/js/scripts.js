@@ -33,4 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // This is form validation which prevents the user from inputting a date that is before the current date
 
 const today = new Date().toISOString().split('T')[0];
-    document.getElementById('eventDate').setAttribute('min', today);
+const eventDateInput = document.getElementById('eventDate');
+
+if (eventDateInput) {
+    eventDateInput.setAttribute('min', today);
+}
