@@ -8,6 +8,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from events_list import app, db
 from events_list.models import Event
 
+
 @app.route('/add_event', methods=['POST'])
 def add_event():
     """
@@ -33,6 +34,7 @@ def add_event():
 
     return redirect(url_for('index'))
 
+
 @app.route('/edit/<int:event_id>', methods=['GET', 'POST'])
 def edit_event(event_id):
     """
@@ -56,6 +58,7 @@ def edit_event(event_id):
 
     return render_template('edit_event.html', event=event)
 
+
 @app.route('/details/<int:event_id>', methods=['GET'])
 def event_details(event_id):
     """
@@ -64,6 +67,7 @@ def event_details(event_id):
     event = Event.query.get_or_404(event_id)
     return render_template('see_details.html', event=event)
 
+
 @app.route('/delete_confirmation/<int:event_id>', methods=['GET'])
 def delete_confirmation(event_id):
     """
@@ -71,6 +75,7 @@ def delete_confirmation(event_id):
     """
     event = Event.query.get_or_404(event_id)
     return render_template('delete_event.html', event=event)
+
 
 @app.route('/delete/<int:event_id>', methods=['POST'])
 def delete_event(event_id):
@@ -89,12 +94,14 @@ def delete_event(event_id):
 
     return redirect(url_for('index'))
 
+
 @app.route('/guidelines')
 def guidelines():
     """
     Displays the website guidelines page.
     """
     return render_template('guidelines.html')
+
 
 @app.route('/')
 def index():
