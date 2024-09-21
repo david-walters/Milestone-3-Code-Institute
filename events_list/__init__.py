@@ -23,16 +23,17 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 # Ensure proper PostgreSQL URI format
 if app.config['SQLALCHEMY_DATABASE_URI'].startswith("postgres://"):
     app.config['SQLALCHEMY_DATABASE_URI'] = (
-        app.config['SQLALCHEMY_DATABASE_URI'].replace("postgres://", "postgresql://", 1)
+        app.config['SQLALCHEMY_DATABASE_URI'].replace(
+            "postgres://", "postgresql://", 1)
     )
 
 # Additional configuration
 app.config['IP'] = os.getenv('IP', '127.0.0.1')
-app.config['PORT'] = int(os.getenv('PORT', '5000'))  # Convert to int explicitly
+app.config['PORT'] = int(os.getenv('PORT', '5000'))
 
 # Initialize extensions
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 # Import routes and models after initializing app
-from events_list import routes, models # noqa
+from events_list import routes, models  # noqa
