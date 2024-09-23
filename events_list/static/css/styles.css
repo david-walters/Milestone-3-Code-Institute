@@ -127,3 +127,83 @@ footer p:first-of-type {
 .btn-success {
     background-color: #018601;
 }
+
+/* ------------- Media Query — Turn Table Rows into Cards ------------- */
+
+@media only screen and (max-width: 1000px) {
+
+    table {
+        width: 100%;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    .table-dark {
+        background-color:  #f4f4f4 !important;
+    }
+
+    table tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        box-shadow: 2px 2px 10px rgb(0 0 0 / 37%);
+        border-radius: 5px;
+        background-color: rgb(48, 48, 48) !important;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: rgb(48, 48, 48) !important;
+      }
+
+    table th {
+        text-align: center;
+    }
+
+    table th:before {
+        content: "# ";
+    }
+
+    table th:first-child {
+        font-weight: bold;
+        font-size: 1.2em;
+        border-top: none;
+    }
+
+    table td:nth-child(2)::before {
+        content: "Town/City: ";
+    }
+    table td:nth-child(3)::before {
+        content: "Event Name: ";
+    }
+    table td:nth-child(4)::before {
+        content: "Details: ";
+    }
+
+    table td:nth-child(5)::before {
+        content: "Date: ";
+    }
+
+    table td:nth-child(6) {
+        padding-bottom: 15px;
+    }
+
+    .btn-warning {
+        margin-left: 10px;
+    }
+
+    .btn-danger {
+        margin-left: 6px;
+    }
+
+    table td::before {
+        font-weight: bold;
+    }
+   
+}
+
+/* I learned how to turn the table rows into cards from this link:
+https://codeburst.io/undo-tables-to-make-them-responsive-5bf6c7510a9d
+
+The code has been modified to my needs*/
