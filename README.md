@@ -409,6 +409,16 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 | 1   | Database URL Issue: The DATABASE_URL provided by Heroku used postgres://, which is deprecated. | I resolved this by replacing postgres:// with postgresql:// in my SQLALCHEMY_DATABASE_URI configuration with an if statement and replace function. |
 | 2   | Internal Server Error: The root cause was database migration issues.                           | I resolved this by running `flask db upgrade` in the Heroku console to apply migrations correctly.                                                 |
 
+### Unresolved Bugs
+
+Using Pylint on all individual files showed amazing resuts. When I used it on the main app folder it said I had circular imports, which is strange as the imports and file structure are as I was taught in the course video.
+
+In the video it states to put the imports in particular at the bottom of the file to prevent circular imports and to ignore the lint warning for the imports being at the bottom of the file as it has no quality assurance.
+
+My understanding is that pylint is reading it in a particular way that sees it as a circular import and not understanding that it has been resolved by placing them at the bottom of the file.
+
+The code works perfectly with no errors and I was advised by my tutor and mentor to not change it as it is not breaking the code at all, and it could well be a false warning.
+
 ---
 
 ## Credits
