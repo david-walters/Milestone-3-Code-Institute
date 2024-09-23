@@ -411,7 +411,7 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ### Unresolved Bugs
 
-Using Pylint on all individual files showed amazing resuts. When I used it on the main app folder it said I had circular imports, which is strange as the imports and file structure are as I was taught in the course video.
+Using Pylint on all individual files showed amazing results. When I used it on the main app folder it said I had circular imports, which is strange as the imports and file structure are as I was taught in the course video.
 
 In the video it states to put the imports in particular at the bottom of the file to prevent circular imports and to ignore the lint warning for the imports being at the bottom of the file as it has no quality assurance.
 
